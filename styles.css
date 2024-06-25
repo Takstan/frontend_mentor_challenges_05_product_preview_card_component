@@ -1,0 +1,160 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+font-family: "Fraunces", serif; 
+font-family: "Montserrat", sans-serif;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 200px auto;
+  background-color: #f2ebe3;
+  width: 600px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: center; */
+  gap: 24px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+img {
+  height: 450px;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.product {
+  margin-top: 32px;
+  width: 250px;
+}
+
+.product-spec {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #6c7289;
+  margin-bottom: 24px;
+}
+.product-title {
+  font-family: "Fraunces", serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1.3;
+  line-height: 1;
+  margin-bottom: 24px;
+  color: #1c232b;
+}
+.product-description {
+  color: #6c7289;
+  /* color: #adb5bd; */
+  font-weight: 600;
+  font-size: 14px;
+  /* font-weight: bold; */
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 36px;
+  font-family: "Fraunces", serif;
+  color: #3c8067;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.product-price span {
+  font-size: 16px;
+  color: #6c7289;
+  text-decoration: line-through;
+  font-weight: normal;
+}
+
+.shop-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 40px;
+  background-color: #3c8067;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 24px 0;
+  cursor: pointer;
+}
+
+.shop-btn:hover {
+  background-color: #1e4034;
+}
+
+.icon {
+  border: none;
+  width: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .product {
+    width: 100%;
+    margin-top: 24px;
+    padding: 0 30px 30px 30px;
+  }
+
+  .product-description {
+    letter-spacing: 0.5px;
+  }
+
+  .price {
+    width: 100%;
+  }
+
+  img {
+    display: none;
+  }
+
+  .hidden {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
